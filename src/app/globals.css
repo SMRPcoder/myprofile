@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer{
+  .card{
+    @apply sm:p-4 lg:p-4 relative p-2 sm:text-sm text-sm lg:text-lg left-14 sm:left-24 md:left-[8.5rem] lg:left-[550px] sm:w-3/4 lg:w-2/4 w-4/5
+  }
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background-image: url("/watercolor-texture-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: Keeps the background fixed while scrolling */
+}
+
+.card {
+
+background: rgba(255, 255, 255, 0.31);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.9px);
+-webkit-backdrop-filter: blur(3.9px);
+border: 1px solid rgba(255, 255, 255, 0.9);
+}
