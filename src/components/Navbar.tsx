@@ -48,7 +48,7 @@ export default function Navbar(props: { backgroundIndex: number, setBackgroundIn
                 <div>
                     <div className='hover:cursor-pointer group flex flex-row' onClick={props.functions.clickmainImage}>
                         <Image className='navImg  m-4 dark:border-white rounded-full border-2 hover:border-[#00acf7] ' width={50} height={50} src="/rp-logo.jpg" alt='logo' />
-                        <span className="group-hover:opacity-100 transition-opacity bg-gray-200 px-1 text-sm text-black rounded-md absolute left-full
+                        <span className="invisible lg:visible xl:visible group-hover:opacity-100 transition-opacity bg-gray-200 px-1 text-sm text-black rounded-md absolute left-full
 -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto">Home</span>
                     </div>
 
@@ -56,22 +56,22 @@ export default function Navbar(props: { backgroundIndex: number, setBackgroundIn
 
                         <div className="hover:cursor-pointer group flex relative" onClick={props.functions.clickInfo} >
                             <Image className='navImg m-4 rounded-full ease-in' width={50} height={50} src="/info.png" alt='logo' />
-                            <span className="group-hover:opacity-100 transition-opacity bg-gray-200 px-1 text-sm text-black rounded-md absolute left-full
+                            <span className="invisible lg:visible xl:visible group-hover:opacity-100 transition-opacity bg-gray-200 px-1 text-sm text-black rounded-md absolute left-full
 -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto">My&nbsp;Info</span>
                         </div>
                         <div className="hover:cursor-pointer group flex relative" onClick={props.functions.clickStudies}>
                             <Image className='navImg m-4 rounded-full ease-in' width={50} height={50} src="/book.png" alt='logo' />
-                            <span className="group-hover:opacity-100 transition-opacity bg-gray-200 px-1 text-sm text-black rounded-md absolute left-full
+                            <span className="invisible lg:visible xl:visible group-hover:opacity-100 transition-opacity bg-gray-200 px-1 text-sm text-black rounded-md absolute left-full
 -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto">My&nbsp;Studies</span>
                         </div>
                         <div className="hover:cursor-pointer group flex relative" onClick={props.functions.clickProject}>
                             <Image className='navImg m-4 ease-in' width={50} height={50} src="/project.png" alt='logo' />
-                            <span className="group-hover:opacity-100 transition-opacity bg-gray-200 px-1 text-sm text-black rounded-md absolute left-full
+                            <span className="invisible lg:visible xl:visible group-hover:opacity-100 transition-opacity bg-gray-200 px-1 text-sm text-black rounded-md absolute left-full
 -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto">My&nbsp;Projects</span>
                         </div>
                         <div className="hover:cursor-pointer group flex relative" onClick={props.functions.clickResume}>
                             <Image className='navImg m-4 rounded-full ease-in' width={50} height={50} src="/resume.png" alt='logo' />
-                            <span className="group-hover:opacity-100 transition-opacity bg-gray-200 px-1 text-sm text-black rounded-md absolute left-full
+                            <span className="invisible lg:visible xl:visible group-hover:opacity-100 transition-opacity bg-gray-200 px-1 text-sm text-black rounded-md absolute left-full
 -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto">My&nbsp;Resume</span>
                         </div>
 
