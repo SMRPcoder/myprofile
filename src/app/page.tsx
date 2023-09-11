@@ -10,14 +10,7 @@ import { Notify } from 'notiflix';
 export default function Home() {
   const myPics: Array<string> = ["my-pic.png", "mypic2.png"];
 
-  const [backgroundIndex, setBackgroundIndex] = useState(0);
-  const [showChild, setShowChid] = useState(false);
-
-  const [mypic, setMyPic] = useState(myPics[backgroundIndex]);
-  useEffect((): void => {
-    setMyPic(myPics[backgroundIndex]);
-    // document.getElementById("main_container")?.style.backgrou
-  }, [backgroundIndex])
+  const [backgroundIndex, setBackgroundIndex] = useState(0);  
 
   const valiadtionObject = yup.object().shape({
     firstname: yup.string().required("First Name Is Required"),
@@ -50,14 +43,12 @@ export default function Home() {
       if (!element.classList.contains("hidden")) {
         element.classList.add("hidden");
         document.getElementById("main_card")?.classList.remove("hidden");
-        setShowChid(prev => !prev);
       }
     })
   }
 
   const contactme=()=>{
     var cardItems = document.getElementsByClassName("card");
-    console.log(Object.values(cardItems));
     Object.values(cardItems).forEach(element => {
       if (!element.classList.contains("hidden")) {
         element.classList.add("hidden");
@@ -67,9 +58,7 @@ export default function Home() {
   }
 
   const clickInfo = () => {
-    console.log("Info is Clicked");
     var cardItems = document.getElementsByClassName("card");
-    console.log(Object.values(cardItems));
     Object.values(cardItems).forEach(element => {
       if (!element.classList.contains("hidden")) {
         element.classList.add("hidden");
@@ -78,9 +67,7 @@ export default function Home() {
     });
   }
   const clickStudies = () => {
-    console.log("studies is cicked");
     var cardItems = document.getElementsByClassName("card");
-    console.log(Object.values(cardItems));
     Object.values(cardItems).forEach(element => {
       if (!element.classList.contains("hidden")) {
         element.classList.add("hidden");
@@ -89,9 +76,7 @@ export default function Home() {
     });
   }
   const clickProject = () => {
-    console.log("projects is cicked");
     var cardItems = document.getElementsByClassName("card");
-    console.log(Object.values(cardItems));
     Object.values(cardItems).forEach(element => {
       if (!element.classList.contains("hidden")) {
         element.classList.add("hidden");
@@ -101,9 +86,7 @@ export default function Home() {
 
   }
   const clickResume = () => {
-    console.log("Resume is cicked")
     var cardItems = document.getElementsByClassName("card");
-    console.log(Object.values(cardItems));
     Object.values(cardItems).forEach(element => {
       if (!element.classList.contains("hidden")) {
         element.classList.add("hidden");
@@ -115,8 +98,6 @@ export default function Home() {
   return (
     <>
       <Navbar {...{ backgroundIndex, 
-                    showChild, 
-                    setShowChid, 
                     setBackgroundIndex, 
                     functions: { clickmainImage, clickInfo, clickStudies, clickProject, clickResume,contactme } }} />
 
@@ -127,7 +108,7 @@ export default function Home() {
           <h1 className='text-black font-bold lg:text-4xl text-normal  left-0 dark:text-white text-ellipsis sm:text-xl' >RAJAPANDEESWARAN</h1>
           <h3 className="italic dark:text-white " >Full-Stack Developer</h3>
           <br></br>
-          <p className='font-semibold text-ellipsis dark:text-white'>"Meet an exceptionally passionate and driven developer, fueled by an insatiable appetite for learning and a boundless enthusiasm for innovation. With an unyielding commitment to mastering the latest technologies and a relentless pursuit of excellence, I thrive on the thrill of tackling new challenges head-on. My curiosity is my guiding force, propelling me to explore uncharted territories in the ever-evolving landscape of technology. I approach each project with unwavering determination and an unquenchable thirst for knowledge, because I believe that the most exciting solutions are born from the relentless pursuit of improvement. If you're seeking a developer who not only embraces change but thrives in it, look no further. Together, we can turn every opportunity into a remarkable journey of growth and achievement."</p>
+          <p className='text-justify font-semibold text-ellipsis dark:text-white'>"Meet an exceptionally passionate and driven developer, fueled by an insatiable appetite for learning and a boundless enthusiasm for innovation. With an unyielding commitment to mastering the latest technologies and a relentless pursuit of excellence, I thrive on the thrill of tackling new challenges head-on. My curiosity is my guiding force, propelling me to explore uncharted territories in the ever-evolving landscape of technology. I approach each project with unwavering determination and an unquenchable thirst for knowledge, because I believe that the most exciting solutions are born from the relentless pursuit of improvement. If you're seeking a developer who not only embraces change but thrives in it, look no further. Together, we can turn every opportunity into a remarkable journey of growth and achievement."</p>
 
         </div>
 
@@ -265,10 +246,8 @@ export default function Home() {
         </div>
         <div id="contact_card" className='hidden card'>
           <Formik initialValues={initialvals} validationSchema={valiadtionObject} onSubmit={(value:any)=>{
-            console.log(value);
             value["to"]="rajapandeeswarans369@gmail.com";
             emailjs.send("service_rulcv47","template_qk20ror",value,process.env.NEXT_PUBLIC_EMAILJS_ID).then((response)=>{
-              console.log(response);
               Notify.success(response.text);
             }).catch((err)=>{
               console.error(err);
@@ -279,34 +258,34 @@ export default function Home() {
             }>
               {({errors,touched})=>(
                 <Form className='justify-between flex flex-col'>
-              <label className='italic'>First Name:</label>
+              <label className='italic dark:text-white'>First Name:</label>
               <Field className={`border border-black ${errors.firstname?"border-red-500":""}`} name="firstname" />
               {errors.firstname && touched.firstname ? (
-             <div className='text-red-500'>{typeof errors.firstname=="string"?errors.firstname:""}</div>
+             <div className='text-lg font-semibold italic text-red-500'>{typeof errors.firstname=="string"?`*${errors.firstname}`:""}</div>
            ) : null}
 
-              <label className='italic'>Last Name:</label>
+              <label className='italic dark:text-white'>Last Name:</label>
               <Field className={`border border-black ${errors.lastname?"border-red-500":""}`} name="lastname" />
               {errors.lastname && touched.lastname ? (
-             <div className='text-red-500'>{typeof errors.lastname=="string"?errors.lastname:""}</div>
+             <div className='text-lg font-semibold italic text-red-500'>{typeof errors.lastname=="string"?`*${errors.lastname}`:""}</div>
            ) : null}
 
-              <label className='italic'>Email:</label>
+              <label className='italic dark:text-white'>Email:</label>
               <Field  className={`border border-black ${errors.email?"border-red-500":""}`} name="email" />
               {errors.email && touched.email ? (
-             <div className='text-red-500'>{typeof errors.email=="string"?errors.email:""}</div>
+             <div className='text-lg font-semibold italic text-red-500'>{typeof errors.email=="string"?`*${errors.email}`:""}</div>
            ) : null}
 
-              <label className='italic'>Subject:</label>
+              <label className='italic dark:text-white'>Subject:</label>
               <Field className={`border border-black ${errors.subject?"border-red-500":""}`} name="subject" />
               {errors.subject && touched.subject ? (
-             <div className='text-red-500'>{typeof errors.subject=="string"?errors.subject:""}</div>
+             <div className='text-lg font-semibold italic text-red-500'>{typeof errors.subject=="string"?`*${errors.subject}`:""}</div>
            ) : null}
 
-              <label className='italic'>Message:</label>
+              <label className='italic dark:text-white'>Message:</label>
               <Field className={`border border-black ${errors.message?"border-red-500":""}`} as={CustomInputComponent} name="message" />
               {errors.message && touched.message ? (
-             <div className='text-red-500'>{typeof errors.message=="string"?errors.message:""}</div>
+             <div className='text-lg font-semibold italic text-red-500'>{typeof errors.message=="string"?`*${errors.message}`:""}</div>
            ) : null}
               <button type='submit' className='p-4 bg-blue-500 m-10 rounded-full border-2 border-white text-white hover:bg-blue-800 hover:border-black' >Send Mail</button>
             </Form>
