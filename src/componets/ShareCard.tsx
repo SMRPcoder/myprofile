@@ -17,7 +17,7 @@ const ShareCard = ({img,link}:{img:string; link:string;}) => {
         </div>
       </div>
       <div className="card__content">
-        <Image className='w-full' src={img} alt='link' width={0} height={0} />
+        <Image className='w-full' src={img} alt='Raja Pandeeswaran Social Links' width={0} height={0} />
       </div>
       <a href={link} target='_blank' className='flex text-blue-400 hover:underline cursor-pointer justify-center items-center' >Open<LinkSVG/></a>
     </div>

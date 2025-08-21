@@ -85,7 +85,7 @@ const AboutComponent = () => {
                     <div className='flex flex-col' >
                         <div className="flex flex-wrap">
                             <div className="flex gap-4 flex-wrap">
-                                <Image className='rounded' src="/img/pic3.jpeg" alt='Raja.jpeg' width={100} height={100} />
+                                <Image className='rounded' src="/img/pic3.jpeg" alt='Raja Pandeeswaran' width={100} height={100} />
                                 <div className="flex flex-col gap-1">
                                     <div className="flex gap-3 items-center -mt-1">
                                         <p className="md:text-4xl text-2xl font-semibold cursor-pointer">Raja Pandeeswaran</p>
