@@ -1,62 +1,42 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import Sidebar from "@/componets/Sidebar";
 
-export const metadata: Metadata = {
-  title: 'RP\'s Profile',
-  description: 'Profile Website For Interviewers',
-}
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-       <div className="h-screen flex justify-center items-center px-2 bg-gradient-to-tr from-sky-300 via-sky-400 to-blue-500">
-  <div className="max-w-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-    <div className="py-4 px-6">
-      <h2 className="text-4xl font-bold text-gray-800">Coming Soon</h2>
-      <p className="mt-2 text-lg text-gray-600">
-        The old site has expired content. I’m working hard to bring you an amazing new website — stay tuned!
-      </p>
-    </div>
-    <div className="py-4 px-6">
-      <div className="flex flex-wrap gap-4 justify-center items-center">
-        <div className="border rounded-lg px-4 py-2">
-          <div
-            id="days"
-            className="font-bold font-mono text-2xl text-gray-800"
-          />
+      <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/favicon/site.webmanifest"></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet"></link>
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <Sidebar />
+        <div className="p-4 sm:ml-64 mt-10 sm:mt-0">
+          {children}
         </div>
-        <div className="border rounded-lg px-4 py-2">
-          <div
-            id="hours"
-            className="font-bold font-mono text-2xl text-gray-800"
-          />
-        </div>
-        <div className="border rounded-lg px-4 py-2">
-          <div
-            id="minutes"
-            className="font-bold font-mono text-2xl text-gray-800"
-          />
-        </div>
-        <div className="border rounded-lg px-4 py-2">
-          <div
-            id="seconds"
-            className="font-bold font-mono text-2xl text-gray-800"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
       </body>
     </html>
-  )
+  );
 }
