@@ -6,15 +6,14 @@ import React, { useState } from 'react';
 export default function Sidebar() {
     const pathName = usePathname();
     const [isHidden, setIsHidden] = useState(true);
-    const router=useRouter();
+    const router = useRouter();
 
     const handleToggleSideBar = () => {
         setIsHidden(!isHidden);
     }
 
-    const handleRouting=(to:string)=>{
+    const handleRouting = (to: string) => {
         setIsHidden(true);
-        console.log(to);
         router.replace(`${to}/`);
     }
     return (
@@ -112,34 +111,34 @@ export default function Sidebar() {
                         </li>
 
                     </ul>
-                    
-                     <ul className="sm:hidden space-y-2">
+
+                    <ul className="sm:hidden space-y-2">
                         <li>
-                            <a onClick={()=>handleRouting("/")} className="font-bold text-2xl" >My Details</a>
+                            <a onClick={() => handleRouting("/")} className="font-bold text-2xl" >My Details</a>
                         </li>
                         <li>
                             {pathName == "/" ? (<hr className='w-6 font-bold' />) : ""}
-                            <a onClick={()=>handleRouting("/")}>Home</a>
+                            <a onClick={() => handleRouting("/")}>Home</a>
                         </li>
                         <li>
                             {pathName.includes("skills") ? (<hr className='w-6 font-bold' />) : (<></>)}
-                            <a onClick={()=>handleRouting("/skills")}>skills</a>
+                            <a onClick={() => handleRouting("/skills")}>skills</a>
                         </li>
                         <li>
                             {pathName.includes("myResume") ? (<hr className='w-6 font-bold' />) : (<></>)}
-                            <a onClick={()=>handleRouting("/myResume")}>Resume</a>
+                            <a onClick={() => handleRouting("/myResume")}>Resume</a>
                         </li>
                         <li>
                             {pathName.includes("projects") ? (<hr className='w-6 font-bold' />) : (<></>)}
-                            <a onClick={()=>handleRouting("/projects")}>projects</a>
+                            <a onClick={() => handleRouting("/projects")}>projects</a>
                         </li>
                         <li>
                             {pathName.includes("experience") ? (<hr className='w-6 font-bold' />) : (<></>)}
-                            <a onClick={()=>handleRouting("/experience")}>Experience</a>
+                            <a onClick={() => handleRouting("/experience")}>Experience</a>
                         </li>
                         <li>
                             {pathName.includes("about") ? (<hr className='w-6 font-bold' />) : (<></>)}
-                            <a onClick={()=>handleRouting("/about")}>About</a>
+                            <a onClick={() => handleRouting("/about")}>About</a>
                         </li>
 
                     </ul>

@@ -21,12 +21,10 @@ const AboutComponent = () => {
         );
     }
 
-    const allContacts = {
+    const [allContacts, setAllContacts] = useState({
         whatsapp: {
             qrcode: "/whatsapp-qr.svg",
-            link: isMobileDevice()?("https://web.whatsapp.com/send?phone=917604827123&text=hii%20raja"):(
-                "https://api.whatsapp.com/send?phone=917604827123&text=hii%20raja"
-            )
+            link: "https://web.whatsapp.com/send?phone=917604827123&text=hii%20raja"
         },
         reddit: {
             qrcode: "/reddit-qr.svg",
@@ -40,11 +38,11 @@ const AboutComponent = () => {
             qrcode: "/gmail-qr.svg",
             link: "mailto:rajapandeeswarans369@gmail.com"
         },
-        linkedin:{
+        linkedin: {
             qrcode: "/linkedin-qr.svg",
             link: "https://linkedin.com/in/rajapandeeswaran"
         }
-    }
+    })
     const [qrDetails, setQrDetails] = useState<{
         qrName: keyof typeof allContacts;
         qrcode: string;
@@ -56,10 +54,25 @@ const AboutComponent = () => {
     // api.whatsapp.com
 
     useEffect(() => {
-        setQrDetails({
-            qrName: "whatsapp",
-            ...allContacts["whatsapp"]
-        })
+        if (isMobileDevice()) {
+            setAllContacts((prev) => ({
+                ...prev,
+                whatsapp: {
+                    qrcode: "/whatsapp-qr.svg",
+                    link: "https://api.whatsapp.com/send?phone=917604827123&text=hii%20raja"
+                }
+            }));
+            setQrDetails({
+                qrName: "whatsapp",
+                qrcode: "/whatsapp-qr.svg",
+                link: "https://api.whatsapp.com/send?phone=917604827123&text=hii%20raja"
+            })
+        } else {
+            setQrDetails({
+                qrName: "whatsapp",
+                ...allContacts["whatsapp"]
+            })
+        }
     }, []);
 
     const handleTabChange = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, changeTo: keyof typeof allContacts) => {
