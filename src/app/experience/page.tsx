@@ -4,8 +4,8 @@ import React from 'react';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "RajaPandeeswaran Experience",
-  description: "Experience page of RajaPandeeswaran portfolio",
+  title: "Raja Pandeeswaran Experience",
+  description: "Experience page of Raja Pandeeswaran portfolio",
 };
 
 export default function Experience() {

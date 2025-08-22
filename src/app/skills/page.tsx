@@ -5,8 +5,8 @@ import SkillCard2Component from '@/componets/skills/SkillCard2Component';
 import SkillToggles from './_components/SkillToggles';
 
 export const metadata: Metadata = {
-    title: "RajaPandeeswaran Skills",
-    description: "Skills page of RajaPandeeswaran portfolio.",
+    title: "Raja Pandeeswaran Skills",
+    description: "Skills page of Raja Pandeeswaran portfolio.",
 };
 
 export default function Skills() {

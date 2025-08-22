@@ -3,7 +3,7 @@ import React from 'react';
 
 export const metadata: Metadata = {
   title: "RajaPandeeswaran Resume",
-  description: "RajaPandeeswaran Resume",
+  description: "Raja Pandeeswaran Resume",
 };
 
 export default function MyResume() {

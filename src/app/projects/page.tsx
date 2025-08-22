@@ -10,8 +10,8 @@ import SequelizeSVG from "@/componets/icons/SequelizeSVG";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "RajaPandeeswaran Projects",
-    description: "Project page of RajaPandeeswaran portfolio, This is Projects Done by Rajapandeeswaran.",
+    title: "Raja Pandeeswaran Projects",
+    description: "Project page of Raja Pandeeswaran portfolio, This is Projects Done by Raja pandeeswaran.",
 };
 
 export default function projects() {
