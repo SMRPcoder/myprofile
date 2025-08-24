@@ -18,7 +18,7 @@ export default function Experience() {
                 "Streamlined frontend-backend integration processes for seamless functionality.",
                 "Designed and maintained robust databases, optimized queries, and implemented indexing and normalization strategies."
             ],
-            link: "https://ramsol.in"
+            link: "https://infoaptotech.com"
         },
         {
             title: "Nodejs Backend Developer",
@@ -26,7 +26,7 @@ export default function Experience() {
             description: ["Improved website performance and application stability by 50%.",
                 "Refactored and optimized backend services for efficiency and maintainability.",
                 "Migrated projects from the MERN stack (MongoDB) to PERN (PostgreSQL with Sequelize)."],
-            link: "https://infoaptotech.com"
+            link: "https://ramsol.in"
         }
     ]
     return (
