@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://myprofile-lovat-tau.vercel.app/sitemap.xml',
+    sitemap: 'https://rajapandeeswaran.vercel.app/sitemap.xml',
   }
 }
