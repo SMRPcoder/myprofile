@@ -7,6 +7,7 @@ import SkillToggles from './_components/SkillToggles';
 export const metadata: Metadata = {
     title: "Raja Pandeeswaran Skills",
     description: "Skills page of Raja Pandeeswaran portfolio.",
+    alternates: { canonical: '/skills' },
 };
 
 export default function Skills() {

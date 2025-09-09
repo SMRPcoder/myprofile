@@ -12,6 +12,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Raja Pandeeswaran Projects",
     description: "Project page of Raja Pandeeswaran portfolio, This is Projects Done by Raja pandeeswaran.",
+    alternates: { canonical: '/projects' },
 };
 
 export default function projects() {

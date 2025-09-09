@@ -4,6 +4,7 @@ import React from 'react';
 export const metadata: Metadata = {
   title: "RajaPandeeswaran Resume",
   description: "Raja Pandeeswaran Resume",
+  alternates: { canonical: '/myResume' },
 };
 
 export default function MyResume() {

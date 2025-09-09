@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Raja Pandeeswaran Experience",
   description: "Experience page of Raja Pandeeswaran portfolio",
+  alternates: { canonical: '/experience' },
 };
 
 export default function Experience() {

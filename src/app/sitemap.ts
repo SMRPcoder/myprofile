@@ -1,40 +1,42 @@
 import type { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
+  const today = new Date().toISOString().split('.')[0] + 'Z' // removes milliseconds
+
   return [
     {
       url: 'https://rajapandeeswaran.vercel.app/',
-      lastModified: new Date(),
+      lastModified: today,
       changeFrequency: 'yearly',
       priority: 1,
     },
     {
       url: 'https://rajapandeeswaran.vercel.app/about',
-      lastModified: new Date(),
+      lastModified: today,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://rajapandeeswaran.vercel.app/skills',
-      lastModified: new Date(),
+      lastModified: today,
       changeFrequency: 'weekly',
       priority: 0.5,
     },
     {
         url:'https://rajapandeeswaran.vercel.app/myResume',
-        lastModified: new Date(),
+        lastModified: today,
         changeFrequency:"yearly",
         priority:0.4
     },
     {
         url:'https://rajapandeeswaran.vercel.app/projects',
-         lastModified: new Date(),
+         lastModified: today,
         changeFrequency:"yearly",
         priority:0.4
     },
     {
         url:'https://rajapandeeswaran.vercel.app/experience',
-         lastModified: new Date(),
+         lastModified: today,
         changeFrequency:"yearly",
         priority:0.4
     }
