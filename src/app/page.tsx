@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Raja Pandeeswaran Portfolio",
-  description: "Raja Pandeeswaran Portfolio, Nodejs Backend Developer, Nodejs Nestjs Expressjs Postgresql MongoDb, 3years of experience",
+  description: "Portfolio of Raja Pandeeswaran — Backend Engineer skilled in Node.js, Next.js, NestJS, and scalable APIs. Explore my projects, resume, and experience in building modern web applications.",
   alternates: { canonical: '/' },
 };
 

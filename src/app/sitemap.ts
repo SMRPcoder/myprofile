@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: 'https://rajapandeeswaran.vercel.app/',
       lastModified: today,
       changeFrequency: 'yearly',
-      priority: 1,
+      priority: 1.0,
     },
     {
       url: 'https://rajapandeeswaran.vercel.app/about',
@@ -20,25 +20,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: 'https://rajapandeeswaran.vercel.app/skills',
       lastModified: today,
       changeFrequency: 'weekly',
-      priority: 0.5,
-    },
-    {
-        url:'https://rajapandeeswaran.vercel.app/myResume',
-        lastModified: today,
-        changeFrequency:"yearly",
-        priority:0.4
+      priority: 0.7,
     },
     {
         url:'https://rajapandeeswaran.vercel.app/projects',
          lastModified: today,
         changeFrequency:"yearly",
-        priority:0.4
+        priority:0.6
+    },
+    {
+        url:'https://rajapandeeswaran.vercel.app/myResume',
+        lastModified: today,
+        changeFrequency:"yearly",
+        priority:0.5
     },
     {
         url:'https://rajapandeeswaran.vercel.app/experience',
          lastModified: today,
         changeFrequency:"yearly",
-        priority:0.4
+        priority:0.5
     }
   ]
 }
