@@ -12,9 +12,15 @@ export const metadata: Metadata = {
 export default function Experience() {
 
     const experienceData: ExperienceCardProps[] = [
+         {
+            title: "Nodejs Backend Developer",
+            subtitle: "HeyBobo - (Oct 2025 - Present)",
+            description: ["..."],
+            link: "https://heybobo.ai"
+        },
         {
             title: "Nodejs Backend Developer",
-            subtitle: "InfoApto Technology - (Sep 2023 - Present)",
+            subtitle: "InfoApto Technology - (Sep 2023 - sep 2025)",
             description: ["Achieved 40% faster development using NestJs and NextJs by optimizing backend services.",
                 "Streamlined frontend-backend integration processes for seamless functionality.",
                 "Designed and maintained robust databases, optimized queries, and implemented indexing and normalization strategies."

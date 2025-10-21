@@ -22,10 +22,10 @@ const AboutComponent = () => {
     }
 
     const [allContacts, setAllContacts] = useState({
-        whatsapp: {
-            qrcode: "/whatsapp-qr.svg",
-            link: "https://web.whatsapp.com/send?phone=917604827123&text=hii%20raja"
-        },
+        // whatsapp: {
+        //     qrcode: "/whatsapp-qr.svg",
+        //     link: "https://web.whatsapp.com/send?phone=917604827123&text=hii%20raja"
+        // },
         reddit: {
             qrcode: "/reddit-qr.svg",
             link: "https://reddit.com/user/rp_coder"
@@ -48,8 +48,8 @@ const AboutComponent = () => {
         qrcode: string;
         link: string;
     }>({
-        qrName: "whatsapp",
-        ...allContacts["whatsapp"]
+        qrName: "linkedin",
+        ...allContacts["linkedin"]
     })
     // api.whatsapp.com
 
@@ -58,19 +58,20 @@ const AboutComponent = () => {
             setAllContacts((prev) => ({
                 ...prev,
                 whatsapp: {
-                    qrcode: "/whatsapp-qr.svg",
-                    link: "https://api.whatsapp.com/send?phone=917604827123&text=hii%20raja"
+                    qrcode: "/linkedin-qr.svg",
+                    link: "https://linkedin.com/in/rajapandeeswaran"
                 }
             }));
             setQrDetails({
-                qrName: "whatsapp",
-                qrcode: "/whatsapp-qr.svg",
-                link: "https://api.whatsapp.com/send?phone=917604827123&text=hii%20raja"
+                qrName: "linkedin",
+                qrcode: "/linkedin-qr.svg",
+                // link: "https://api.whatsapp.com/send?phone=917604827123&text=hii%20raja"
+                link:"https://linkedin.com/in/rajapandeeswaran"
             })
         } else {
             setQrDetails({
-                qrName: "whatsapp",
-                ...allContacts["whatsapp"]
+                qrName: "linkedin",
+                ...allContacts["linkedin"]
             })
         }
     }, []);
@@ -150,9 +151,9 @@ const AboutComponent = () => {
                         <div>
                             {/* From Uiverse.io by belmonde_4844 */}
                             <div className="flex flex-row p-2 border-y-4">
-                                <button onClick={(e) => handleTabChange(e, "whatsapp")} className={`flex p-2 ${qrDetails.qrName == "whatsapp" ? "bg-gray-300 border hover:bg-white" : "hover:bg-gray-300"} rounded`}>
+                                {/* <button onClick={(e) => handleTabChange(e, "whatsapp")} className={`flex p-2 ${qrDetails.qrName == "whatsapp" ? "bg-gray-300 border hover:bg-white" : "hover:bg-gray-300"} rounded`}>
                                     <WhatsappSVG />
-                                </button>
+                                </button> */}
                                 <button onClick={(e) => handleTabChange(e, "github")} className={`flex p-2 ${qrDetails.qrName == "github" ? "bg-gray-300 border hover:bg-white" : "hover:bg-gray-300"} rounded`}>
                                     <GithubSVG />
                                 </button>
