@@ -22,10 +22,10 @@ const AboutComponent = () => {
     }
 
     const [allContacts, setAllContacts] = useState({
-        // whatsapp: {
-        //     qrcode: "/whatsapp-qr.svg",
-        //     link: "https://web.whatsapp.com/send?phone=917604827123&text=hii%20raja"
-        // },
+        whatsapp: {
+            qrcode: "/whatsapp-qr.svg",
+            link: "https://web.whatsapp.com/send?phone=917604827123&text=hii%20raja"
+        },
         reddit: {
             qrcode: "/reddit-qr.svg",
             link: "https://reddit.com/user/rp_coder"
@@ -48,8 +48,8 @@ const AboutComponent = () => {
         qrcode: string;
         link: string;
     }>({
-        qrName: "linkedin",
-        ...allContacts["linkedin"]
+       qrName: "whatsapp",
+        ...allContacts["whatsapp"]
     })
     // api.whatsapp.com
 
@@ -58,20 +58,19 @@ const AboutComponent = () => {
             setAllContacts((prev) => ({
                 ...prev,
                 whatsapp: {
-                    qrcode: "/linkedin-qr.svg",
-                    link: "https://linkedin.com/in/rajapandeeswaran"
+                    qrcode: "/whatsapp-qr.svg",
+                    link: "https://api.whatsapp.com/send?phone=917604827123&text=hii%20raja"
                 }
             }));
             setQrDetails({
-                qrName: "linkedin",
-                qrcode: "/linkedin-qr.svg",
-                // link: "https://api.whatsapp.com/send?phone=917604827123&text=hii%20raja"
-                link:"https://linkedin.com/in/rajapandeeswaran"
+                qrName: "whatsapp",
+                qrcode: "/whatsapp-qr.svg",
+                link: "https://api.whatsapp.com/send?phone=917604827123&text=hii%20raja"
             })
         } else {
             setQrDetails({
-                qrName: "linkedin",
-                ...allContacts["linkedin"]
+                  qrName: "whatsapp",
+                ...allContacts["whatsapp"]
             })
         }
     }, []);
@@ -121,14 +120,14 @@ const AboutComponent = () => {
                             </div>
                         </div>
                         <div className="mt-4 text-[#005ef6] text-xl tracking-[2px]">
-                            #3 Years Of Experience
+                            #3 Years & 5 Months Of Experience
                         </div>
                         <div className="italic mt-2 flex items-center text-[18px] text-[#4b587c] font-normal">
-                            <LocationSVG /> chennai
+                            <LocationSVG /> Bangalore
                         </div>
-                        {/* <div className="italic mt-2 text-[18px] text-[#4b587c] font-normal">
+                        <div className="italic mt-2 text-[18px] text-[#4b587c] font-normal">
                             Age: 24 (May-2001)
-                        </div> */}
+                        </div>
                         <div className="flex flex-wrap gap-6 text-[#4b587c] text-[12px] mt-4">
                             <span onClick={handleCopy} className="cursor-pointer hover:text-[#ff6154]">Share</span>
                             •
@@ -151,9 +150,9 @@ const AboutComponent = () => {
                         <div>
                             {/* From Uiverse.io by belmonde_4844 */}
                             <div className="flex flex-row p-2 border-y-4">
-                                {/* <button onClick={(e) => handleTabChange(e, "whatsapp")} className={`flex p-2 ${qrDetails.qrName == "whatsapp" ? "bg-gray-300 border hover:bg-white" : "hover:bg-gray-300"} rounded`}>
+                                <button onClick={(e) => handleTabChange(e, "whatsapp")} className={`flex p-2 ${qrDetails.qrName == "whatsapp" ? "bg-gray-300 border hover:bg-white" : "hover:bg-gray-300"} rounded`}>
                                     <WhatsappSVG />
-                                </button> */}
+                                </button>
                                 <button onClick={(e) => handleTabChange(e, "github")} className={`flex p-2 ${qrDetails.qrName == "github" ? "bg-gray-300 border hover:bg-white" : "hover:bg-gray-300"} rounded`}>
                                     <GithubSVG />
                                 </button>

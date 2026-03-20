@@ -4,19 +4,23 @@ import React from 'react';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Raja Pandeeswaran Experience",
-  description: "Experience page of Raja Pandeeswaran portfolio",
-  alternates: { canonical: '/experience' },
+    title: "Raja Pandeeswaran Experience",
+    description: "Experience page of Raja Pandeeswaran portfolio",
+    alternates: { canonical: '/experience' },
 };
 
 export default function Experience() {
 
     const experienceData: ExperienceCardProps[] = [
-         {
+        {
             title: "Nodejs Backend Developer",
-            subtitle: "HeyBobo - (Oct 2025 - Present)",
-            description: ["..."],
-            link: "https://heybobo.ai"
+            subtitle: "HeyBobo - (Oct 2025 - March 2026)",
+            description: ["Worked as a Node.js Backend Developer and led the Dietary module",
+                "owning end-to-end design and implementation",
+                "Built scalable backend services across health, nutrition, fitness, education, and lifestyle domains using NestJS (Express + Fastify), Python FastAPI, MongoDB, and Redis. Integrated AI-driven features",
+                "Including dynamic user chat suggestions and conversation history management. Deployed services using Docker and contributed to CI/CD pipelines",
+                "while strengthening server-side architecture and production deployment practices"],
+            // link: "https://heybobo.ai"
         },
         {
             title: "Nodejs Backend Developer",
@@ -37,12 +41,12 @@ export default function Experience() {
         }
     ]
     return (
-         <div>
+        <div>
             <div className="text-center mb-6 bg-gradient-to-r from-purple-500 via-teal-500 to-orange-500 bg-clip-text text-transparent text-3xl font-black">
                 My Experience
             </div>
             <ExperienceCard cardsData={experienceData} />
         </div>
-        
+
     )
 }

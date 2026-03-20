@@ -12,10 +12,12 @@ export default function MyDetails() {
                     <h1  className='font-extrabold text-5xl text-center'>pandeeswaran</h1>
                     </div>
                     <p className='text-center mt-2 p-2' >
-                        I’m a Nodejs Backend Developer with a passion for building dynamic, scalable applications using modern frameworks
-                        like NestJS, ExpressJS and React, Next.js. Skilled in designing efficient backends, integrating APIs, and working
-                        with databases like PostgreSQL,MongoDB, along with ORMs like Sequelize. A clean-code enthusiast who thrives
-                        under pressure and enjoys solving complex problems with practical, high-impact solutions.
+                        Backend developer with 3.5 years of focused experience in Node.js, building production-grade REST APIs using NestJS on
+both Express and Fastify adapters — not just writing code, but understanding how the pieces fit together under the hood.
+Started with Node.js from day one and have gone deep on it, while actively expanding into Python for AI-driven features
+and keeping a close eye on Golang as a next step. Bring a solid understanding of the full JavaScript ecosystem- from how
+the browser executes JS, through React’s rendering model, to how Next.js handles server-side logic- which makes cross-team
+collaboration with frontend engineers natural and effective. Driven by curiosity, not just deadlines
                     </p>
                 </div>
             </div>

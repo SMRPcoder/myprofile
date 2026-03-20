@@ -8,6 +8,8 @@ import MongoDbSVG from "@/componets/icons/MongoDbSVG";
 import MongooseSVG from "@/componets/icons/MongooseSVG";
 import SequelizeSVG from "@/componets/icons/SequelizeSVG";
 import type { Metadata } from "next";
+import PythonSVG from '@/componets/icons/PythonSVG';
+import FastApiSVG from '@/componets/icons/FastApiSVG';
 
 export const metadata: Metadata = {
     title: "Raja Pandeeswaran Projects",
@@ -18,6 +20,15 @@ export const metadata: Metadata = {
 export default function projects() {
 
     const projectCardsData: ProjectCardProps[] = [
+         {
+            icons: [<NestJsSVG key={1} />, <ExpressJsSVG key={2} />,<PythonSVG key={2}/>, <FastApiSVG key={2}/>],
+            secondaryIcons: [<MongoDbSVG key={1} />, <MongooseSVG key={2} />],
+            title: "Recrubot.com",
+            subtitle: "Job Search Tool.",
+            description: `Developed with Python(Fastapi), Nestjs(Express/Fastify) with mongoDB. 
+            Includes login system, AI chat system, and user role control, High detailed Profile system`,
+            // link: "https://recrubot.com"
+        },
         {
             icons: [<NestJsSVG key={1} />, <PostgreSqlSVG key={2} />],
             secondaryIcons: [<SequelizeSVG key={1} />, <NextJsSVG key={2} />],
